@@ -1,5 +1,6 @@
 package com.fraudify.ws.user.model;
 
+import com.fraudify.ws.user.validation.UniqueEmail;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -19,10 +20,11 @@ public class User {
     String username;
     @NotBlank
     @Email
+    @UniqueEmail
     String email;
 
     @Size(min = 8, max = 255)
-    @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}$\n")
+    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$")
     String password;
 
     public Long getId() {
