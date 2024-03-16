@@ -1,0 +1,10 @@
+{
+  "signUp": "Sign Up",
+  "username": "Username",
+  "email": "Email",
+  "password": "Password",
+  "rePassword": "Password Repeat",
+  "passwordMissMatch": "Passwords do not match",
+  "unexpectedError": "Unexpected errors occured. Please try again.",
+  "signUpSuccess": "Registration Successful"
+}

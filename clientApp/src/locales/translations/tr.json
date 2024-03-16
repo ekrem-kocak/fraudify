@@ -1,0 +1,10 @@
+{
+  "signUp": "Kayıt ol",
+  "username": "Kullanıcı Adı",
+  "email": "E-posta",
+  "password": "Şifre",
+  "rePassword": "Şifre Tekrar",
+  "passwordMissMatch": "Şifreler eşleşmiyor",
+  "unexpectedError": "Beklenmeyen bir hata oluştu. Lütfen tekrar deneyiniz.",
+  "signUpSuccess": "Kayıt Başarılı"
+}
