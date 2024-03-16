@@ -1,9 +1,11 @@
 package com.fraudify.ws.user.controller;
 
 import com.fraudify.ws.error.ApiError;
+import com.fraudify.ws.shared.Messages;
 import com.fraudify.ws.user.model.User;
 import com.fraudify.ws.user.service.UserService;
 import jakarta.validation.Valid;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -34,7 +36,9 @@ public class UserController {
         ApiError apiError = new ApiError();
         apiError.setPath("api/v1/users");
         apiError.setStatusCode("400");
-        apiError.setMessage("Validation Error");
+
+        String message = Messages.getMessageForLocale("fraudify.constraint.validationError", LocaleContextHolder.getLocale());
+        apiError.setMessage(message);
 
 //        Map<String, String> validationErrors = new HashMap<>();
 //        for (var fieldError : exception.getBindingResult().getFieldErrors()) {

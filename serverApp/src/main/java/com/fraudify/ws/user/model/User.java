@@ -24,7 +24,7 @@ public class User {
     String email;
 
     @Size(min = 8, max = 255)
-    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$")
+    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$", message = "{fraudify.constraint.password.pattern}")
     String password;
 
     public Long getId() {
