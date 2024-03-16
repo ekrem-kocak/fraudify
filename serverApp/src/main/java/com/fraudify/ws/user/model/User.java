@@ -17,6 +17,7 @@ public class User {
     @GeneratedValue
     Long id;
     @Size(min = 4, max = 255)
+    @NotBlank(message = "{fraudify.constraint.username.notBlank}")
     String username;
     @NotBlank
     @Email
